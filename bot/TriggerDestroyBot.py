@@ -20,12 +20,11 @@ async def on_ready():
     print('ready')
 @client.event
 async def on_message(msg):
-    if msg.author.name == "counting" or killRun:
+    if msg.author.name == "counting":
         print('not gonna work')
     else:
         print(msg.content)
         if msg.content.lower()== "putin":
-            killRun=True
             print(client.guilds)
             print(f'{client.user} has connected to Discord!')
             text_channel_list = []
